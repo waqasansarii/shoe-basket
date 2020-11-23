@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React,{useReducer} from'react'
 import './App.css';
+import Routers from './routes';
+import reducer from './reducer/reducer'
+import {Initial_state} from './reducer/reducer'
+import shopContext from './context/context';
+
+
 
 function App() {
+
+  const [state,dispatch] =useReducer(reducer,Initial_state)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <shopContext.Provider value={
+      {addCart : state, setCart : dispatch}
+    }>
+
+    <div >
+      
+      <Routers />
     </div>
+    </shopContext.Provider>
   );
 }
 

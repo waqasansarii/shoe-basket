@@ -1,0 +1,29 @@
+.navBar_linking{
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+}
+.navBar_linking:hover{
+    color: rgb(163, 231, 228);
+    /* border-bottom: solid; */
+    font-size: 1.1em;
+    transition: .3s;
+    text-decoration: none;
+}
+.web_name{
+    text-decoration: none;
+    color: white;
+}
+.cart_count{
+    /* background-color: darkgrey; */
+    position: relative;
+    top: -15px;
+    right: 8px;
+    /* z-index: 2; */
+}
+
+@media screen and (max-width:400px){
+    .navBar_link{
+        font-size: .8em;
+    }
+}
